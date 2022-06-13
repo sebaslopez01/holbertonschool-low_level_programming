@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - Random number 
+ * main - Random number
  *
  * Return: 0 for success value
  */
@@ -21,7 +21,7 @@ int main(void)
 	{
 		printf("%d is zero\n", n);
 	}
-	else 
+	else
 	{
 		printf("%d is negative\n", n);
 	}
