@@ -1,28 +1,29 @@
+#include <stdio.h>
 #include "main.h"
 
-
 /**
- * calc_val - helper function
- * @n: number
+ * print_chars - Prints characters needed
+ * @n: Number to print
  *
  * Return: void
  */
-void calc_val(int n)
+void print_chars(int n)
 {
+	char nstr[20];
 	int i;
+	int len = strlen(nstr);
 
-	if (n > 0)
+	sprintf(nstr, "%d", n);
+
+	for (i = 0; i < len; i++)
 	{
-		i = n % 10;
-		n /= 10;
-
-		calc_val(n);
-		_putchar('0' + i);
+		_putchar(nstr[i]);
 	}
-	else if (n < 0)
+
+	if (n != 98)
 	{
-		n *= -1;
-		calc_val(n);
+		_putchar(',');
+		_putchar(' ');
 	}
 }
 
@@ -39,24 +40,14 @@ void print_to_98(int n)
 	{
 		for (; n <= 98; n++)
 		{
-			calc_val(n);
-			if (n != 98)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+			print_chars(n);
 		}
 	}
 	else if (n > 98)
 	{
 		for (; n >= 98; n--)
 		{
-			calc_val(n);
-			if (n != 98)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+			print_chars(n);
 		}
 	}
 	else
@@ -64,4 +55,5 @@ void print_to_98(int n)
 		_putchar('9');
 		_putchar('8');
 	}
+	_putchar('\n');
 }
