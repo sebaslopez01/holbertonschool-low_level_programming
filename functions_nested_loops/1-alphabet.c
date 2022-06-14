@@ -1,3 +1,5 @@
+int _putchar(int c);
+
 /**
  * print_alphabet - prints alphabet
  *
