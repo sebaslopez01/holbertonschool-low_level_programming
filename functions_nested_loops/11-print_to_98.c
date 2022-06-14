@@ -10,11 +10,11 @@
  */
 void print_chars(int n)
 {
-	char nstr[13];
+	char nstr[20];
 	int i;
-	int len = strlen(nstr);
 
 	sprintf(nstr, "%d", n);
+	int len = strlen(nstr);
 
 	for (i = 0; i < len; i++)
 	{
