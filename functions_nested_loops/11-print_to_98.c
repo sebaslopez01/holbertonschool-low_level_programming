@@ -14,6 +14,7 @@ void print_chars(int n)
 	int i;
 
 	sprintf(nstr, "%d", n);
+
 	int len = strlen(nstr);
 
 	for (i = 0; i < len; i++)
