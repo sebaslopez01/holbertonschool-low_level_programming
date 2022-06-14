@@ -12,10 +12,11 @@ void print_chars(int n)
 {
 	char nstr[20];
 	int i;
+	int len;
 
 	sprintf(nstr, "%d", n);
 
-	int len = strlen(nstr);
+	len = strlen(nstr);
 
 	for (i = 0; i < len; i++)
 	{
