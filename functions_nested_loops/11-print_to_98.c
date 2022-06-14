@@ -8,13 +8,11 @@
  */
 void print_to_98(int n)
 {
-	int i;
-
 	if (n < 98)
 	{
 		for (; n <= 98; n++)
 		{
-			calc(n);
+			calc_val(n);
 			if (n != 98)
 			{
 				_putchar(',');
@@ -26,7 +24,7 @@ void print_to_98(int n)
 	{
 		for (; n >= 98; n--)
 		{
-			calc(n);
+			calc_val(n);
 			if (n != 98)
 			{
 				_putchar(',');
@@ -42,12 +40,12 @@ void print_to_98(int n)
 }
 
 /**
- * calc - helper function
+ * calc_val - helper function
  * @n: number
  *
  * Return: void
  */
-void calc(int n)
+void calc_val(int n)
 {
 	int i;
 
@@ -56,12 +54,12 @@ void calc(int n)
 		i = n % 10;
 		n /= 10;
 
-		calc(n);
+		calc_val(n);
 		_putchar('0' + i);
 	}
 	else
 	{
 		n *= -1;
-		calc(n);
+		calc_val(n);
 	}
 }
