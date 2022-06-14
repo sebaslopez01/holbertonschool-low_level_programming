@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include "main.h"
 
 /**
  * print_chars - Prints characters needed
@@ -18,13 +17,13 @@ void print_chars(int n)
 
 	for (i = 0; i < len; i++)
 	{
-		_putchar(nstr[i]);
+		putchar(nstr[i]);
 	}
 
 	if (n != 98)
 	{
-		_putchar(',');
-		_putchar(' ');
+		putchar(',');
+		putchar(' ');
 	}
 }
 
@@ -53,8 +52,15 @@ void print_to_98(int n)
 	}
 	else
 	{
-		_putchar('9');
-		_putchar('8');
+		putchar('9');
+		putchar('8');
 	}
-	_putchar('\n');
+	putchar('\n');
+}
+
+int main(void)
+{
+	print_to_98(111);
+
+	return (0);
 }
