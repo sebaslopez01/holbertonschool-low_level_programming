@@ -1,5 +1,32 @@
 #include "main.h"
 
+
+/**
+ * calc_val - helper function
+ * @n: number
+ *
+ * Return: void
+ */
+void calc_val(int n)
+{
+	int i;
+
+	if (n > 0)
+	{
+		i = n % 10;
+		n /= 10;
+
+		calc_val(n);
+		_putchar('0' + i);
+	}
+	else if (n < 0)
+	{
+		n *= -1;
+		calc_val(n);
+	}
+}
+
+
 /**
  * print_to_98 - Prints all natural numbers from n to 98
  * @n: First number
@@ -36,30 +63,5 @@ void print_to_98(int n)
 	{
 		_putchar('9');
 		_putchar('8');
-	}
-}
-
-/**
- * calc_val - helper function
- * @n: number
- *
- * Return: void
- */
-void calc_val(int n)
-{
-	int i;
-
-	if (n > 0)
-	{
-		i = n % 10;
-		n /= 10;
-
-		calc_val(n);
-		_putchar('0' + i);
-	}
-	else
-	{
-		n *= -1;
-		calc_val(n);
 	}
 }
