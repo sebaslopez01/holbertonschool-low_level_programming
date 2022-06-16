@@ -1,6 +1,33 @@
 #include "main.h"
 
 /**
+ * print_chars - Prints characters needed
+ * @n: Number to print
+ *
+ * Return: void
+ */
+void print_chars(int n)
+{
+	char nstr[20];
+	int i;
+	int len;
+
+	sprintf(nstr, "%d", n);
+
+	len = strlen(nstr);
+
+	for (i = 0; i < len; i++)
+		_putchar(nstr[i]);
+
+	if (n != 98)
+	{
+		_putchar(',');
+		_putchar(' ');
+	}
+}
+
+
+/**
  * print_times_table - Prints the n times table
  * @n: Number of times table
  *
