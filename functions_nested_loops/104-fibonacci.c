@@ -8,6 +8,7 @@
 int main(void)
 {
 	int i;
+	unsigned int long temp;
 
 	unsigned int long last = 0;
 	unsigned int long current = 1;
@@ -18,7 +19,7 @@ int main(void)
 
 		printf("%lu", res);
 
-		unsigned int long temp = current;
+		temp = current;
 
 		current = res;
 
