@@ -11,14 +11,12 @@ int main(void)
 
 	long l[52] = { 0, 1 };
 
-	printf("1, ");
-
 	for (i = 2; i <= 51; i++)
 	{
 		long res = l[i - 1] + l[i - 2];
 
 		l[i] = res;
-		
+
 		printf("%ld", res);
 
 		if (i != 51)
