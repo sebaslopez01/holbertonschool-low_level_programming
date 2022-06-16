@@ -14,7 +14,7 @@ int main(void)
 	unsigned long int last = 0;
 	unsigned long int current = 1;
 
-	for (i = 0; i < 97; i++)
+	for (i = 0; i < 98; i++)
 	{
 		unsigned long int res = current + last;
 
@@ -26,7 +26,7 @@ int main(void)
 
 		last = temp;
 
-		if (i != 96)
+		if (i != 97)
 			printf(", ");
 	}
 	putchar('\n');
