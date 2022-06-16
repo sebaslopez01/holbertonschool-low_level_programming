@@ -43,10 +43,7 @@ void print_times_table(int n)
 	int next;
 
 	if (n > 15 || n < 0)
-	{
-		_putchar('\n');
 		return;
-	}
 
 	for (i = 0; i < n + 1; i++)
 	{
