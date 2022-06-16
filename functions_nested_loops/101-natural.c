@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	long long int count;
+	int count;
 	int i;
 	int j;
 
@@ -18,7 +18,7 @@ int main(void)
 	for (j = 1; j < 205; j++)
 		count += j * 5;
 
-	printf("%lld\n", count);
+	printf("%d\n", count);
 
 	return (0);
 }
