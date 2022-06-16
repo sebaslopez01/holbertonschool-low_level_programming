@@ -11,12 +11,12 @@ int main(void)
 {
 	int count;
 	int i;
-	int j;
 
-	for (i = 1; i < 342; i++)
-		count += i * 3;
-	for (j = 1; j < 205; j++)
-		count += j * 5;
+	for (i = 1; i < 1024; i++)
+	{
+		if (i % 3 == 0 || i % 5 == 0)
+			count += i;
+	}
 
 	printf("%d\n", count);
 
