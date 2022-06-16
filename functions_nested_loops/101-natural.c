@@ -15,7 +15,7 @@ int main(void)
 
 	for (i = 1; i < 342; i++)
 		count += i * 3;
-	for (j = 1; j < 205; i++)
+	for (j = 1; j < 205; j++)
 		count += j * 5;
 
 	printf("%d", count);
