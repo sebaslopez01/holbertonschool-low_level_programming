@@ -25,11 +25,11 @@ void print_chars(int n)
 
 
 /**
- * print_multiples - Multiples of naturals
+ * main - Multiples of naturals
  *
  * Return: void
  */
-void print_multiples(void)
+int main(void)
 {
 	int count;
 	int i;
@@ -41,4 +41,6 @@ void print_multiples(void)
 	}
 
 	printf("%d", count);
+
+	return (0);
 }
