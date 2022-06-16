@@ -20,12 +20,6 @@ void print_chars(int n)
 
 	for (i = 0; i < len; i++)
 		_putchar(nstr[i]);
-
-	if (n != 98)
-	{
-		_putchar(',');
-		_putchar(' ');
-	}
 }
 
 
