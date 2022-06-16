@@ -18,7 +18,7 @@ int main(void)
 	for (j = 1; j < 205; j++)
 		count += j * 5;
 
-	printf("%ld\n", count);
+	printf("%lld\n", count);
 
 	return (0);
 }
