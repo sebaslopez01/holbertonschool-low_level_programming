@@ -52,7 +52,7 @@ void print_times_table(int n)
 			res = i * j;
 			next = i * (j + 1);
 
-			print_chars('0' + res);
+			print_chars(res);
 
 			if (j != n)
 			{
