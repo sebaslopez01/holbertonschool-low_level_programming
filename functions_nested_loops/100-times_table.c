@@ -59,12 +59,12 @@ void print_times_table(int n)
 				_putchar(',');
 				_putchar(' ');
 
-				if (n >= 10 && next < 10)
+				if (next < 10)
 				{
 					_putchar(' ');
 					_putchar(' ');
 				}
-				else if (n < 10 && next < 10)
+				else if (next < 100)
 					_putchar(' ');
 			}
 		}
