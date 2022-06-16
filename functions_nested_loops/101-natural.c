@@ -1,27 +1,5 @@
 #include <stdio.h>
-#include <string.h>
 #include "main.h"
-
-
-/**
- * print_chars - chars
- * @n: Number to print
- *
- * Return: void
- */
-void print_chars(int n)
-{
-	char nstr[20];
-	int i;
-	int len;
-
-	sprintf(nstr, "%d", n);
-
-	len = strlen(nstr);
-
-	for (i = 0; i < len; i++)
-		_putchar(nstr[i]);
-}
 
 
 /**
@@ -34,10 +12,15 @@ int main(void)
 	int count;
 	int i;
 
-	for (i = 1; i < 1024; i++)
+	for (i = 1; i < 342; i++)
 	{
-		count += i * 3;
-		count += i * 5;
+		int m_3 = i * 3;
+		int m_5 = i * 5;
+
+		if (m_5 < 1024)
+			count += m_5;
+
+		count += m_3;
 	}
 
 	printf("%d", count);
