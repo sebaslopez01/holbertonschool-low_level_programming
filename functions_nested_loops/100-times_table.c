@@ -8,16 +8,16 @@
  */
 void print_times_table(int n)
 {
+	int i;
+	int j;
+	int res;
+	int next;
+
 	if (n > 15 || n < 0)
 	{
 		_putchar('\n');
 		return;
 	}
-
-	int i;
-	int j;
-	int res;
-	int next;
 
 	for (i = 0; i < n + 1; i++)
 	{
