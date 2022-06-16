@@ -8,14 +8,15 @@
 int main(void)
 {
 	int i;
-	unsigned int long temp;
 
-	unsigned int long last = 0;
-	unsigned int long current = 1;
+	unsigned long int temp;
+
+	unsigned long int last = 0;
+	unsigned long int current = 1;
 
 	for (i = 0; i < 97; i++)
 	{
-		unsigned int long res = current + last;
+		unsigned long int res = current + last;
 
 		printf("%lu", res);
 
