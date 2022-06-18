@@ -12,7 +12,7 @@ int main(void)
 	unsigned long int last = 0, current = 1, temp;
 	unsigned long int first_half_l, second_half_l, first_half_c, second_half_c;
 
-	for (i = 0; i <= 93; i++)
+	for (i = 0; i <= 91; i++)
 	{
 		unsigned long int res = current + last;
 
