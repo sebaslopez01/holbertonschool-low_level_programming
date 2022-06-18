@@ -10,6 +10,7 @@ int main(void)
 	int i;
 
 	unsigned long int last = 0, current = 1, temp;
+	unsigned long int first_half_l, second_half_l, first_half_c, second_half_c;
 
 	for (i = 0; i <= 93; i++)
 	{
@@ -21,10 +22,10 @@ int main(void)
 		last = temp;
 	}
 
-	unsigned long int first_half_l = last / 10000000000;
-	unsigned long int second_half_l = last % 10000000000;
-	unsigned long int first_half_c = current / 10000000000;
-	unsigned long int second_half_c = current % 10000000000;
+	first_half_l = last / 10000000000;
+	second_half_l = last % 10000000000;
+	first_half_c = current / 10000000000;
+	second_half_c = current % 10000000000;
 
 	for (i = 93; i <= 98; i++)
 	{
