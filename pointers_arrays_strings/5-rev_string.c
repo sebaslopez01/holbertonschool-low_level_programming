@@ -23,7 +23,7 @@ int lenstr(char *s)
 void rev_string(char *s)
 {
 	int i;
-	char new_s[100];
+	char new_s[450];
 
 	int len = lenstr(s);
 
