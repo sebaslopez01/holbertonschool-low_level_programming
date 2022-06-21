@@ -4,7 +4,7 @@
  *
  * Return: Length of the string
  */
-const int lenstr(char *s)
+int lenstr(char *s)
 {
 	int len = 0;
 
