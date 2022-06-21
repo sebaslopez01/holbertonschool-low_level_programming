@@ -4,9 +4,9 @@
  *
  * Return: Length of the string
  */
-size_t lenstr(char *s)
+int lenstr(char *s)
 {
-	size_t len = 0;
+	int len = 0;
 
 	while (s[len])
 		len++;
@@ -24,7 +24,7 @@ void rev_string(char *s)
 {
 	int i;
 
-	size_t len = lenstr(s);
+	int len = lenstr(s);
 
 	char new_s[len];
 
