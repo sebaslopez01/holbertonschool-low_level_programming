@@ -23,10 +23,9 @@ int lenstr(char *s)
 void rev_string(char *s)
 {
 	int i;
+	char new_s[100];
 
-	const int len = lenstr(s);
-
-	char new_s[len];
+	int len = lenstr(s);
 
 	for (i = 0; i < len; i++)
 	{
