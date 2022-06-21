@@ -37,5 +37,5 @@ char *_strcat(char *dest, char *src)
 
 	new_s[len1 + len2] = '\0';
 
-	return (dest);
+	return (new_s);
 }
