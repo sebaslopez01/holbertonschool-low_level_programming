@@ -4,7 +4,7 @@
  *
  * Return: Length of the string
  */
-int lenstr(char *s)
+const int lenstr(char *s)
 {
 	int len = 0;
 
@@ -24,7 +24,7 @@ void rev_string(char *s)
 {
 	int i;
 
-	int len = lenstr(s);
+	const int len = lenstr(s);
 
 	char new_s[len];
 
