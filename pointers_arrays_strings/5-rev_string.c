@@ -1,4 +1,20 @@
 /**
+ * lenstr - Get the length os string
+ * @s: String
+ *
+ * Return: Length of the string
+ */
+size_t lenstr(char *s)
+{
+	size_t len = 0;
+
+	while (s[len])
+		len++;
+	return (len);
+}
+
+
+/**
  * rev_string - Reverses a string
  * @s: String to reverse
  *
@@ -8,21 +24,16 @@ void rev_string(char *s)
 {
 	int i;
 
-	int len = 0;
-
-	while (1)
-	{
-		if (s[len] == 0)
-			break;
-		len++;
-	}
+	size_t len = lenstr(s);
 
 	char new_s[len];
 
-	for (i = len - 1; i >= 0; i--)
+	for (i = 0; i < len; i++)
 	{
-		new_s[i] = s[i];
+		new_s[len - i - 1] = s[i];
 	}
+	new_s[len] = '\0';
 
-	s = new_s;
+	for (i = 0; i <= len; i++)
+		s[i] = new_s[i];
 }
