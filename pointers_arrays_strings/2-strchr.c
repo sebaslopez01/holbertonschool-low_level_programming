@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 	char *p = NULL;
 	int len = 0;
 
-	while (s[i] != '\0')
+	while (s[len] != '\0')
 		len++;
 
 	if (c == '\0')
