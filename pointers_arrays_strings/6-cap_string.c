@@ -37,9 +37,9 @@ char *cap_string(char *s)
 {
 	int i;
 
-	for (i = 1; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (is_separator(s[i - 1]) && (s[i] >= 97 && s[i] <= 122))
+		if ((i == 0 || is_separator(s[i - 1])) && (s[i] >= 97 && s[i] <= 122))
 			s[i] = s[i] - 32;
 	}
 
