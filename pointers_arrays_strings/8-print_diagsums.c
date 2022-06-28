@@ -17,10 +17,10 @@ void print_diagsums(int *a, int size)
 	int j = 0;
 	int k = size - 1;
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size * size; i += 3)
 	{
-		count1 += a[i][j];
-		count2 += a[i][k];
+		count1 += a[i + j];
+		count2 += a[i + k];
 
 		j++;
 		k--;
