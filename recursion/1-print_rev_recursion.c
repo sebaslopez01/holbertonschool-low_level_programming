@@ -8,5 +8,5 @@
  */
 void _print_rev_recursion(char *s)
 {
-	
+	write(1, s, 30);	
 }
