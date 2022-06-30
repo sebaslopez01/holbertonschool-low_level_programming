@@ -23,5 +23,5 @@ int helper_f(int c, int n)
  */
 int _sqrt_recursion(int n)
 {
-	helper_f(1, n);
+	return (helper_f(1, n));
 }
