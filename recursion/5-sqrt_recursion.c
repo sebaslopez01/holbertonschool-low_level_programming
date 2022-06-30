@@ -7,12 +7,12 @@
  */
 int helper_f(int c, int n)
 {
-	if (y < 0)
+	if (n < 0)
 		return (-1);
-	if (y == 0)
+	if (n == 0)
 		return (0);
 
-	return (1 + helper_f(x + 2, y - x));
+	return (1 + helper_f(c + 2, n - c));
 }
 
 /**
