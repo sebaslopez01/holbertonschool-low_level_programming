@@ -1,5 +1,5 @@
 /**
- * helper_f - Helps to get prime number
+ * is_prime - Helps to get prime number
  * @c: Counter
  * @n: Number to verify
  *
