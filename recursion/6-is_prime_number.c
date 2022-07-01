@@ -11,8 +11,8 @@ int is_prime(int c, int n)
 		return (0);
 	if (c <= n / 2)
 		is_prime(c + 1, n);
-	else
-		return (1);
+
+	return (1);
 }
 
 /**
