@@ -2,7 +2,7 @@
 
 for FILE in *.c
 do
-	NEWFILE=$(echo "$FILE" | tr ".c" ".o")
+	NEWFILE=$(echo "$FILE" | tr "\.c" "\.o")
 	gcc -c $FILE -o $NEWFILE
 done
 
