@@ -2,7 +2,7 @@
 
 for FILE in *.c
 do
-	NEWFILE=FILE | cut -d '.' -f 1
+	NEWFILE= echo "$FILE" | tr 'c' 'o'
 	gcc -c $FILE -o $NEWFILE
 done
 
