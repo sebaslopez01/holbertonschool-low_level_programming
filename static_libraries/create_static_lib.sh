@@ -2,8 +2,7 @@
 
 for FILE in *.c
 do
-	NEWFILE=$(echo "$FILE" | tr "\.c" "\.o")
+	NEWFILE=$(echo "$FILE" | cut -d '.' -f 1)
 	gcc -c $FILE -o $NEWFILE
+	ar rc liball.a $NEWFILE
 done
-
-ar rc liball.a ./*.o
