@@ -11,8 +11,8 @@
  */
 int main(int argc, char **argv)
 {
-	unsigned int i, j;
-	int n;
+	int i, n;
+	unsigned int j;
 
 	int sum = 0;
 
