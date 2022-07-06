@@ -11,7 +11,8 @@
  */
 int main(int argc, char **argv)
 {
-	int i, j;
+	unsigned int i, j;
+	int n;
 
 	int sum = 0;
 
@@ -34,7 +35,7 @@ int main(int argc, char **argv)
 			}
 		}
 
-		int n = atoi(argv[i]);
+		n = atoi(argv[i]);
 
 		sum += n;
 	}
