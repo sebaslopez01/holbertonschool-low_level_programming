@@ -43,7 +43,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	new_str = malloc(sizeof(char) * count_memory(ac, av) + ac);
+	new_str = malloc(sizeof(char) * count_memory(ac, av) + ac + 1);
 
 	if (!new_str)
 		return (NULL);
