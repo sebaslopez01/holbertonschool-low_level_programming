@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * count_memory - Counts the memory space needed for an array of strings
@@ -50,7 +49,7 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; j < strlen(av[i]); j++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			new_str[k] = av[i][j];
 			k++;
