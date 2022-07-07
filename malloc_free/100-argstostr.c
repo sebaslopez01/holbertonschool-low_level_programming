@@ -2,6 +2,31 @@
 #include <string.h>
 
 /**
+ * count_memory - Counts the memory space needed for an array of strings
+ * @ac: Size of av
+ * @av: Array of strings
+ *
+ * Return: Memory space needed
+ */
+int count_memory(int ac, char **av)
+{
+	int i, count = 0;
+	unsigned int j;
+
+	if (ac == 0 || av == NULL)
+		return (0);
+
+	for (i = 1; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+			count++;
+	}
+
+	return (count);
+}
+
+
+/**
  * argstostr - Concatenates all the arguments passed
  * @ac: Size of av
  * @av: Array of arguments
@@ -10,7 +35,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, k = 0;
+	int i, k = 0, count_m = 0;
 	unsigned int j;
 
 	char *new_str = NULL;
@@ -18,7 +43,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	new_str = malloc(sizeof(char) * strlen(av) + ac);
+	new_str = malloc(sizeof(char) * count_memory(ac, av) + ac);
 
 	if (!new_str)
 		return (NULL);
