@@ -9,8 +9,7 @@
  */
 int count_memory(int ac, char **av)
 {
-	int i, count = 0;
-	unsigned int j;
+	int i, j, count = 0;
 
 	if (ac == 0 || av == NULL)
 		return (0);
@@ -34,8 +33,7 @@ int count_memory(int ac, char **av)
  */
 char *argstostr(int ac, char **av)
 {
-	int i, k = 0;
-	unsigned int j;
+	int i, j, k = 0;
 
 	char *new_str = NULL;
 
