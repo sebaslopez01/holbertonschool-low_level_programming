@@ -35,7 +35,7 @@ int count_memory(int ac, char **av)
  */
 char *argstostr(int ac, char **av)
 {
-	int i, k = 0, count_m = 0;
+	int i, k = 0;
 	unsigned int j;
 
 	char *new_str = NULL;
