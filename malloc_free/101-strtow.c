@@ -33,18 +33,18 @@ int count_words(char *str)
  */
 char **strtow(char *str)
 {
-	int i, j, k = 0, l = 0, m = 0, lenstr = 0;
+	int i, j, k = 0, l = 0, m = 0, lenstr = 0, count = count_words(str);
 	char **arr_str = NULL;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0' || count == 0)
 		return (NULL);
 	
-	arr_str = malloc(sizeof(char *) * count_words(str) + 1);
+	arr_str = malloc(sizeof(char *) * count + 1);
 
 	if (!arr_str)
 		return (NULL);
 
-	for (i = 0; i < count_words(str); i++)
+	for (i = 0; i < count; i++)
 	{
 		while (str[k] != '\0')
 		{
