@@ -7,7 +7,7 @@
  * @s2: Second string
  * @n: n bytes to take from s2
  *
- * Return: Pointer to a newly allocated space in memory 
+ * Return: Pointer to a newly allocated space in memory
  * with concatenated strings
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
