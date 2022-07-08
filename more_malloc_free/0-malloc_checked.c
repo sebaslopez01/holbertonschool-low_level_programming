@@ -13,11 +13,7 @@ void *malloc_checked(unsigned int b)
 	p = malloc(b);
 
 	if (!p)
-	{
-		p = malloc(sizeof(int));
-		p[0] = 98;
-		return (*p);
-	}
+		exit(98);
 
 	return (p);
 }
