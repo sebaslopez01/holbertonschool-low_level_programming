@@ -26,21 +26,6 @@ int count_words(char *str)
 
 
 /**
- * advance_str - Advance string pointer
- * @str: String to advance
- *
- * Return: A pointer to a string
- */
-char *advance_str(char *str)
-{
-	int count = 0;
-
-	char **arr_str = NULL;
-
-	arr_str = malloc(sizeof(char *) * 
-}
-
-/**
  * strtow - Splits a string into words
  * @str: String to split
  *
@@ -51,7 +36,7 @@ char **strtow(char *str)
 	int i, j, k = 0, l = 0, m = 0, lenstr = 0;
 	char **arr_str = NULL;
 
-	if (str == NULL || str == "")
+	if (str == NULL || *str == "")
 		return (NULL);
 	
 	arr_str = malloc(sizeof(char *) * count_words(str) + 1);
