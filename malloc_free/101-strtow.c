@@ -39,7 +39,7 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0' || count == 0)
 		return (NULL);
 
-	arr_str = malloc(sizeof(char *) * count + 7);
+	arr_str = malloc(sizeof(char *) * count + 8);
 
 	if (!arr_str)
 		return (NULL);
