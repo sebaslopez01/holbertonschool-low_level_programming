@@ -24,6 +24,34 @@ int count_words(char *str)
 	return (count);
 }
 
+/**
+ * count_length - Counts length of string with space
+ * @str: String to count
+ * @k: Pointer to k counter
+ *
+ * Return: Length of string
+ */
+int count_length(char *str, int *k)
+{
+	int lenstr = 0;
+
+	while (str[*k] != '\0')
+	{
+		if (str[*k] != ' ' && str[*k + 1] == ' ')
+		{
+			lenstr++;
+			(*k)++;
+			break;
+		}
+
+		if (str[*k] != ' ' && str[*k + 1] != ' ')
+			lenstr++;
+		(*k)++;
+	}
+
+	return (lenstr);
+}
+
 
 /**
  * strtow - Splits a string into words
@@ -38,30 +66,13 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0' || count == 0)
 		return (NULL);
-
 	arr_str = malloc(sizeof(char *) * count + 8);
-
 	if (!arr_str)
 		return (NULL);
-
 	for (i = 0; i < count; i++)
 	{
-		while (str[k] != '\0')
-		{
-			if (str[k] != ' ' && str[k + 1] == ' ')
-			{
-				lenstr++;
-				k++;
-				break;
-			}
-			if (str[k] != ' ' && str[k + 1] != ' ')
-				lenstr++;
-			k++;
-		}
-
+		lenstr = count_length(str, &k);
 		arr_str[i] = malloc(sizeof(char) * lenstr + 1);
-		lenstr = 0;
-
 		if (!arr_str[i])
 		{
 			for (j = 0; j < i; j++)
@@ -69,7 +80,6 @@ char **strtow(char *str)
 			free(arr_str);
 			return (NULL);
 		}
-
 		while (str[l] != '\0')
 		{
 			if (str[l] != ' ' && str[l + 1] == ' ')
@@ -79,7 +89,6 @@ char **strtow(char *str)
 				m++;
 				break;
 			}
-
 			if (str[l] != ' ' && str[l + 1] != ' ')
 			{
 				arr_str[i][m] = str[l];
@@ -87,12 +96,9 @@ char **strtow(char *str)
 			}
 			l++;
 		}
-
 		arr_str[i][m] = '\0';
 		m = 0;
 	}
-
 	arr_str[i] = NULL;
-
 	return (arr_str);
 }
