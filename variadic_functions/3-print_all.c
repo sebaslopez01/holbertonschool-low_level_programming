@@ -13,26 +13,11 @@ void print_all(const char * const format, ...)
 	int val2;
 	float val3;
 	char *val4 = NULL;
-	int i = 0, n = 0;
+	int i = 0;
+
+	va_start(args, format);
 
 	while (format[i] != '\0')
-	{
-		switch (format[i])
-		{
-			case 'c':
-			case 'i':
-			case 'f':
-			case 's':
-				n++;
-				break;
-		}
-		i++;
-	}
-	i = 0;
-
-	va_start(args, n);
-
-	while (i < n)
 	{
 		switch (format[i])
 		{
@@ -56,6 +41,7 @@ void print_all(const char * const format, ...)
 
 		if (i != n - 1)
 			printf(", ");
+		i++;
 	}
 	putchar('\n');
 
