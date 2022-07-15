@@ -36,6 +36,8 @@ void print_all(const char * const format, ...)
 				val3 = va_arg(args, char *);
 				printf("%s", val3);
 				break;
+			default:
+				continue;
 		}
 
 		if (format[i + 1] != '\0')
