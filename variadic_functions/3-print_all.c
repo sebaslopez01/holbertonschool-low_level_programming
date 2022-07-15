@@ -9,14 +9,12 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int val1;
+	int val1, i = 0;
 	double val2;
 	char *val3 = NULL;
-	int i = 0;
 
 	va_start(args, format);
-
-	while (format != NULL || format[i] != '\0')
+	while (!format || format[i] != '\0')
 	{
 		switch (format[i])
 		{
@@ -42,12 +40,10 @@ void print_all(const char * const format, ...)
 				i++;
 				continue;
 		}
-
 		if (format[i + 1] != '\0')
 			printf(", ");
 		i++;
 	}
 	putchar('\n');
-
 	va_end(args);
 }
