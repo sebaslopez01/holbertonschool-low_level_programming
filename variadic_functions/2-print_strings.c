@@ -14,7 +14,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *value = NULL;
 
 	if (n == 0)
+	{
+		putchar('\n');
 		return;
+	}
 
 	va_start(args, n);
 
