@@ -37,6 +37,7 @@ void print_all(const char * const format, ...)
 				printf("%s", val3);
 				break;
 			default:
+				i++;
 				continue;
 		}
 
