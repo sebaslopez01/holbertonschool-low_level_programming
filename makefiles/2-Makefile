@@ -1,5 +1,5 @@
 CC = gcc
-SRC = main.c
+SRC = main.c school.c
 OBJ = $(wildcard *.o)
 NAME = school
 
