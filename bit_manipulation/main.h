@@ -2,17 +2,7 @@
 #define MAIN_H
 
 #include <stdlib.h>
-
-unsigned int _strlen(const char *str)
-{
-	unsigned int len = 0;
-
-	while (str[len] != '\0')
-		len++;
-
-	return (len);
-}
-
+#include <string.h>
 
 int _putchar(char c);
 
