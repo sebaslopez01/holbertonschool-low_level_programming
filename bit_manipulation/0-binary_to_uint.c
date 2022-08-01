@@ -10,20 +10,19 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, j = 1, result = 0;
+	int i, j = 1;
+	unsigned int result = 0;
 
 	if (b == NULL)
 		return (0);
 
-	for (i = strlen(b); i > 0; i--)
+	for (i = strlen(b) - 1; i >= 0; i--)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
 
 		if (b[i] == '1')
-		{
 			result += j;
-		}
 
 		j *= 2;
 	}
