@@ -10,7 +10,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int n_copy = n, pos_binary = 1;
+	unsigned long int pos_binary = 1;
 
 	if (index > 32)
 		return (-1);
