@@ -1,6 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 
+
+/**
+ * get_pos_binary - Gets the binary position value
+ * @num_digits: Position to get the value from
+ *
+ * Return: Position value
+ */
 unsigned long int get_pos_binary(int num_digits)
 {
 	unsigned long int pos_binary = 1;
@@ -37,7 +44,7 @@ void print_binary(unsigned long int n)
 			putchar('1');
 		else
 			putchar('0');
-		
+
 		num_digits--;
 	}
 }
