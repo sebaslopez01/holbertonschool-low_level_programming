@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 
-unsigned int get_pos_binary(unsigned int num_digits)
+int get_pos_binary(int num_digits)
 {
-	unsigned int pos_binary = 1;
+	int pos_binary = 1;
 
 	while (num_digits != 0)
 	{
@@ -24,12 +24,12 @@ unsigned int get_pos_binary(unsigned int num_digits)
 void print_binary(unsigned long int n)
 {
 	unsigned long int n_copy = n;
-	unsigned int num_digits, pos_binary;
+	int num_digits, pos_binary;
 
 	for (num_digits = 0; n_copy > 1; num_digits++)
 		n_copy >>= 1;
 
-	while (num_digits > 0)
+	while (num_digits >= 0)
 	{
 		pos_binary = get_pos_binary(num_digits);
 
