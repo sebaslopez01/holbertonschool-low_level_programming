@@ -21,7 +21,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 		index--;
 	}
 
-	pos_binary ^= *n;
+	*n ~= pos_binary;
 
 	return (1);
 }
