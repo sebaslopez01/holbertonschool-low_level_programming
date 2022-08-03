@@ -30,7 +30,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		current = *h;
 	if (idx == 0)
 	{
-		new_node->next = NULL;
+		new_node->next = current;
 		new_node->prev = NULL;
 		(*h)->prev = new_node;
 		*h = new_node;
