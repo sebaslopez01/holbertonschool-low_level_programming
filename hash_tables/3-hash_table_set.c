@@ -35,7 +35,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 			if (!strcmp(current->key, key))
 			{
-				free(current);
 				current = new_hash_node;
 				return (1);
 			}
