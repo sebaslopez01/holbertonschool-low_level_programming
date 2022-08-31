@@ -26,25 +26,28 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_hash_node->key = strdup(key);
 	new_hash_node->value = strdup(value);
 
-	current = ht->array[index];
-	if (current)
+	if (ht->array[index])
 	{
-		new_hash_node->next = current;
-
+		current = ht->array[index];
 		while (current != NULL)
 		{
+			new_hash_node->next = current;
+
 			if (!strcmp(current->key, key))
 			{
 				free(current);
-				break;
+				current = new_hash_node;
+				return (1);
 			}
 			current = current->next;
 		}
+
+		new_hash_node->next = ht->array[index];
 	}
 	else
 		new_hash_node->next = NULL;
 
-	current = new_hash_node;
+	ht->array[index] = new_hash_node;
 
 	return (1);
 }
