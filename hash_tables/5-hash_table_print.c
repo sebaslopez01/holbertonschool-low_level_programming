@@ -23,7 +23,7 @@ void hash_table_print(const hash_table_t *ht)
 		n = 0;
 		m = 0;
 
-		if (m)
+		if (m && current)
 			printf(", ");
 
 		while (current != NULL)
