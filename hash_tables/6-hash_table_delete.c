@@ -21,11 +21,13 @@ void hash_table_delete(hash_table_t *ht)
 		{
 			current = ht->array[i];
 
-			ht->array[i] = ht->array[i]->next;
+			ht->array[i] = current->next;
 
 			free(current->key);
 			free(current->value);
 			free(current);
 		}
 	}
+
+	free(ht->array);
 }
