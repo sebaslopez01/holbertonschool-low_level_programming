@@ -31,7 +31,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		current = ht->array[index];
 		while (current != NULL)
 		{
-			new_hash_node->next = current;
+			new_hash_node->next = current->next;
 
 			if (!strcmp(current->key, key))
 			{
