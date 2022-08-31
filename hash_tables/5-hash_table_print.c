@@ -10,7 +10,7 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
 	hash_node_t *current = NULL;
-	char n, m;
+	char n, m = 0;
 
 	if (ht == NULL)
 		return;
@@ -21,7 +21,6 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		current = ht->array[i];
 		n = 0;
-		m = 0;
 
 		if (m && current)
 			printf(", ");
