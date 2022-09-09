@@ -60,7 +60,7 @@ int binary_search(int *array, size_t size, int value)
 		}
 		else if (array[middle] > value)
 		{
-			for (i = left; left < middle; i++)
+			for (i = left; i < middle; i++)
 			{
 				if (i > left)
 					printf(", ");
