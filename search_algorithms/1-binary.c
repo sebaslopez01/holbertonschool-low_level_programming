@@ -5,18 +5,19 @@
  * print_array - Prints an array of integers
  * @array: Array to print
  * @size: Size of the array
+ * @start: Where to start the array
  *
  * Return: void
  */
-void print_array(int *array, size_t size)
+void print_array(int *array, int size, int start)
 {
-	size_t i;
+	int i;
 
 	printf("Searching in array: ");
 
-	for (i = 0; i < size; i++)
+	for (i = start; i < size; i++)
 	{
-		if (i > 0)
+		if (i > start)
 			printf(", ");
 		printf("%d", array[i]);
 	}
@@ -41,37 +42,26 @@ int binary_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	print_array(array, size);
+	print_array(array, size, 0);
 
 	while (left <= right)
 	{
-		if (left != right)
-			printf("Searching in array: ");
 		middle = (int)((left + right) / 2);
 		if (array[middle] < value)
 		{
-			for (i = middle + 1; i <= right; i++)
-			{
-				if (i > middle + 1)
-					printf(", ");
-				printf("%d", array[i]);
-			}
-			printf("\n");
+			if (left != right)
+				print_array(array, right, middle + 1);
 			left = middle + 1;
 		}
 		else if (array[middle] > value)
 		{
-			for (i = left; i < middle; i++)
-			{
-				if (i > left)
-					printf(", ");
-				printf("%d", array[i]);
-			}
-			printf("\n");
+			if (left != right)
+				print_array(array, middle, left);
 			right = middle - 1;
 		}
 		else
 			return (middle);
 	}
+
 	return (-1);
 }
