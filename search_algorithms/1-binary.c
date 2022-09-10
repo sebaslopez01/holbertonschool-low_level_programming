@@ -50,7 +50,7 @@ int binary_search(int *array, size_t size, int value)
 		if (array[middle] < value)
 		{
 			if (left != right)
-				print_array(array, right, middle + 1);
+				print_array(array, right + 1, middle + 1);
 			left = middle + 1;
 		}
 		else if (array[middle] > value)
